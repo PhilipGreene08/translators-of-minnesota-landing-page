@@ -1,0 +1,323 @@
+:root {
+    --primary-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+   background-color: lightgray; 
+   max-width: 1100px;
+   margin: auto;
+}
+
+#main-nav {
+    background-color: lightgray;
+}
+
+.btn {
+    margin: 20px;
+    border: none;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 5px;
+    
+}
+
+.btn-contact {
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    background: #333;
+    padding: 13px 20px;
+    margin: 30px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn a {
+   text-decoration: none;
+   color: var(--primary-color); 
+}
+
+.btn:hover {
+    background-color: gray;
+}
+
+#main-nav .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: lightgray;
+    max-width: 1100px;
+    overflow: auto;
+    margin: auto;
+}
+
+#main-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#main-nav ul a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 10px;
+    margin: 10px;
+    font-size: xx-large;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+#main-nav ul a:hover {
+    background-color: white;
+}
+
+.container-intro {
+    height: 600px;
+    width: 100%;
+    /* background-color: white; */
+    background: url('/images/Precision\ Translations\ Keyboard.jpg') no-repeat center center/cover; 
+}
+
+#intro-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 0;
+}  
+
+.container-intro p {
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+#about-us {
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+.about-us-photo {
+    justify-content: center;
+    border-right: 1px black solid;
+    padding: 10px;
+}
+
+.about-us-content {
+display: grid;
+justify-content: center;
+text-align: center;
+border-left: 1px black solid;
+font-size: 2rem;
+color: var(--primary-color);
+}
+
+/* services page */
+
+.services {
+    background: lightgray;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.services-text {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    line-height: 2rem;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.english {
+    border-bottom: 1px black solid;
+}
+
+.spanish {
+    border-top: 1px black solid;
+}
+
+.services-photo img{
+    width: 100%;
+    border-left: 3px solid black;
+    padding: 20px;
+}
+
+.services-lists {
+    background: lightgray;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.services-lists ul {
+    list-style-type: none;
+    line-height: 1.5;
+    text-align: left;
+    
+}
+
+.english-list, .spanish-list {
+    border: 1px black solid;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 1.5rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+/* contact us page */
+
+#contact-form {
+ line-height: 1.5;   
+}
+
+.l-heading {
+    display: grid;
+    justify-content: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group #message {
+    height: 200px;
+}
+
+#contact-info .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: var(--primary-color);
+    line-height: 1.5;
+    
+}
+
+#contact-info .container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* footer */
+.footer {
+    border-top: 1px black solid;
+    height: 25px;
+}
+
+.footer {
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #main-nav .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main-nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #main-nav ul a {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #about-us {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .about-us-photo {
+        border: none;
+    }
+
+    .about-us-photo img {
+        width: 100%;
+    }
+
+    .about-us-content {
+        padding: 5px;
+        border-top: 1px black solid;
+        border-left: none;
+    }
+
+/* services page */
+
+    .services-text .english, .spanish, .services-photo img {
+        border: none;
+    }
+
+    .services  {
+        display: flex;
+    }
+
+    .services img {
+        display: none;
+    }
+
+    .services .english {
+        border-bottom: 1px black solid;
+    }
+
+    .services .spanish {
+        border-top: 1px black solid;
+    }
+
+ 
+    .footer {
+        height: 50px;
+    }
+
+    .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
+}
